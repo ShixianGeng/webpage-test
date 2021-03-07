@@ -2,10 +2,38 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<script defer src="js/app.js"></script>
 	<title>Data collection</title>
+	<style>
+		#page-wrap {
+		     max-width: 800px;
+		     margin: 0 auto;
+		}
+	</style>
 </head>
 <body>
+	<div id="page-wrap">
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-storage.js"></script>
+	<script>
+	 var firebaseConfig = {
+	    apiKey: "AIzaSyCWiPUe-0xaDRUI1oT4jPi3ZWqyvd4k8t8",
+	    authDomain: "oral-capabilities.firebaseapp.com",
+	    projectId: "oral-capabilities",
+	    storageBucket: "oral-capabilities.appspot.com",
+	    messagingSenderId: "130456476055",
+	    appId: "1:130456476055:web:5221e827cf63ce9644ccd2"
+  		};		
+
+  		firebase.initializeApp(firebaseConfig);
+	</script>
 <h1>Data Collection</h1>
+<h2>Input your name</h2>
+	<form id="nameinput">
+  		<label for="name">Name:</label><br>
+  		<input type="text" id="username"><br>
+  		<input type="submit" value="Submit">
+	</form>
 <h2>Instructions: Part 1</h2>
 <ul>
 	<li>Please take photos of your mouth with your smartphone as instructed.</li>
@@ -22,180 +50,203 @@
 	<li>
 		<p>A photo of natural facial expression</p>
 		<img src="pic1.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form1">
+			<input type="file" id="pic1" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p1">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of mouth open naturally</p>
 		<img src="pic2.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form2">
+			<input type="file" id="pic2" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p2">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue up</p>
 		<img src="pic3.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form3">
+			<input type="file" id="pic3" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p3">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue left as much as you can</p>
 		<img src="pic4.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form4">
+			<input type="file" id="pic4" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p4">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue right</p>
 		<img src="pic5.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form5">
+			<input type="file" id="pic5" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p5">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue down and out as much as you can</p>
 		<img src="pic6.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form6">
+			<input type="file" id="pic6" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p6">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue left and out as much as you can</p>
 		<img src="pic7.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form7">
+			<input type="file" id="pic7" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p7">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue right and out as much as you can</p>
 		<img src="pic8.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form8">
+			<input type="file" id="pic8" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p8">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue up and out</p>
 		<img src="pic9.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form9">
+			<input type="file" id="pic9" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p9">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue left and up</p>
 		<img src="pic10.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form10">
+			<input type="file" id="pic10" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p10">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue right and up</p>
 		<img src="pic11.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form11">
+			<input type="file" id="pic11" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p11">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue protrusion with mouth close like this</p>
 		<img src="pic12.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form12">
+			<input type="file" id="pic12" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p12">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of tongue straight out as much as you can</p>
 		<img src="pic13.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form13">
+			<input type="file" id="pic13" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p13">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of showing teeth</p>
 		<img src="pic14.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form14">
+			<input type="file" id="pic14" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p14">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of mouth pouting</p>
 		<img src="pic15.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form15">
+			<input type="file" id="pic15" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p15">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of mouth pursing</p>
 		<img src="pic16.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form16">
+			<input type="file" id="pic16" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p16">Not submitted</p>
 	</li>
 	<li>
 		<p>Open your mouth as large as you can</p>
 		<img src="pic17.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form17">
+			<input type="file" id="pic17" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p17">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of mouth left distorted</p>
 		<img src="pic18.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form18">
+			<input type="file" id="pic18" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p18">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of mouth right distorted</p>
 		<img src="pic19.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form19">
+			<input type="file" id="pic19" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p19">Not submitted</p>
 	</li>
 	<li>
 		<p>A photo of puffy face</p>
 		<img src="pic20.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form20">
+			<input type="file" id="pic20" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p20">Not submitted</p>
 	</li>
 	<li>
 		<p>Please use your tongue to push against your left cheek</p>
 		<img src="pic21.png" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form21">
+			<input type="file" id="pic21" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p21">Not submitted</p>
 	</li>
 	<li>
 		<p>Please use your tongue to push against your right cheek</p>
 		<img src="pic22.PNG" width="300">
-		<form action="/action_page.php">
-			<input type="file" id="myFile" name="filename">
+		<form id="form22">
+			<input type="file" id="pic22" name="filename">
 			<input type="submit">
 		</form>
+		<p id="p22">Not submitted</p>
 	</li>
 </ol>
+</div>
 
 </body>
 </html>
