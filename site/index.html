@@ -28,275 +28,30 @@
   		firebase.initializeApp(firebaseConfig);
 	</script>
 <h1>Data Collection</h1>
-<h2>Input your name</h2>
 	<form id="nameinput">
-  		<label for="name">Name:</label><br>
+  		<label for="name">Your Name:</label><br>
   		<input type="text" id="username"><br>
   		<input type="submit" value="Submit">
 	</form>
 <h2>Instructions: Part 1</h2>
 <ul>
-	<li>Please take photos of your mouth with your smartphone as instructed.</li>
-	<li>You don’t need to show your entire face (You can if you want), but please make sure your photo of the mouth and jaw are clear.</li>
+	<li>Please take a video of your mouth with your smartphone as instructed in the instruction video.</li>
+	<li>You don’t need to show your entire face, but please make sure your photo of the mouth and jaw are clear.</li>
 	<li>If you are unable to complete some instructions, it’s fine. Please just record your attempt.</li>
-	<li>It will be 22 photos.</li>
-	<li>Proximate time taken: 15 minutes.</li>
+	<li>Once finished, please upload your video.</li>
 </ul>
-<h3>Taking Photos</h3>
-<ul>
-	<li>In this section, please take photos as instructed.</li>
-</ul>
-<ol>
-	<li>
-		<p>A photo of natural facial expression</p>
-		<img src="pic1.png" width="300">
-		<form id="form1">
-			<input type="file" id="pic1" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of mouth open naturally</p>
-		<img src="pic2.png" width="300">
-		<form id="form2">
-			<input type="file" id="pic2" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of tongue up</p>
-		<img src="pic3.png" width="300">
-		<form id="form3">
-			<input type="file" id="pic3" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of tongue left as much as you can</p>
-		<img src="pic4.png" width="300">
-		<form id="form4">
-			<input type="file" id="pic4" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of tongue right</p>
-		<img src="pic5.png" width="300">
-		<form id="form5">
-			<input type="file" id="pic5" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of tongue down and out as much as you can</p>
-		<img src="pic6.png" width="300">
-		<form id="form6">
-			<input type="file" id="pic6" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of tongue left and out as much as you can</p>
-		<img src="pic7.png" width="300">
-		<form id="form7">
-			<input type="file" id="pic7" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of tongue right and out as much as you can</p>
-		<img src="pic8.png" width="300">
-		<form id="form8">
-			<input type="file" id="pic8" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of tongue up and out</p>
-		<img src="pic9.png" width="300">
-		<form id="form9">
-			<input type="file" id="pic9" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of tongue left and up</p>
-		<img src="pic10.png" width="300">
-		<form id="form10">
-			<input type="file" id="pic10" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of tongue right and up</p>
-		<img src="pic11.png" width="300">
-		<form id="form11">
-			<input type="file" id="pic11" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of tongue protrusion with mouth close like this</p>
-		<img src="pic12.png" width="300">
-		<form id="form12">
-			<input type="file" id="pic12" name="filename">
-			<input type="submit">
-		</form>
+<h3>Instruction Video</h3>
+<video width="480" height="360" controls>
+  <source src="instruction.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<h4 id = "upload">Upload Here</h4>
+	<form id="form">
+		<input type="file" id="vid" name="filename">
+		<input type="submit">
+	</form>
 
-	</li>
-	<li>
-		<p>A photo of tongue straight out as much as you can</p>
-		<img src="pic13.png" width="300">
-		<form id="form13">
-			<input type="file" id="pic13" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of showing teeth</p>
-		<img src="pic14.png" width="300">
-		<form id="form14">
-			<input type="file" id="pic14" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of mouth pouting</p>
-		<img src="pic15.png" width="300">
-		<form id="form15">
-			<input type="file" id="pic15" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of mouth pursing</p>
-		<img src="pic16.png" width="300">
-		<form id="form16">
-			<input type="file" id="pic16" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>Open your mouth as large as you can</p>
-		<img src="pic17.png" width="300">
-		<form id="form17">
-			<input type="file" id="pic17" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of mouth left distorted</p>
-		<img src="pic18.png" width="300">
-		<form id="form18">
-			<input type="file" id="pic18" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of mouth right distorted</p>
-		<img src="pic19.png" width="300">
-		<form id="form19">
-			<input type="file" id="pic19" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>A photo of puffy face</p>
-		<img src="pic20.png" width="300">
-		<form id="form20">
-			<input type="file" id="pic20" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>Please use your tongue to push against your left cheek</p>
-		<img src="pic21.png" width="300">
-		<form id="form21">
-			<input type="file" id="pic21" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>Please use your tongue to push against your right cheek</p>
-		<img src="pic22.PNG" width="300">
-		<form id="form22">
-			<input type="file" id="pic22" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-</ol>
 
-<h3>Recording Videos</h3>
-<ul>
-	<li>In this section, please record videos as instructed.</li>
-</ul>
-
-<ol>
-	<li>
-		<p>Please open your mouth as large as you can for at least 10 seconds</p>
-		<img src="pic17.png" width="300">
-		<form id="form2_1">
-			<input type="file" id="vid1" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>Please move your tongue to left and to right as much as you can for 5 times slowly</p>
-		<img src="vid2.PNG" width="300">
-		<form id="form2_2">
-			<input type="file" id="vid2" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>Please move your tongue up and down as much as you can for 5 times slowly</p>
-		<img src="vid3.PNG" width="300">
-		<form id="form2_3">
-			<input type="file" id="vid3" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>Please move your tongue to left, then up, then right, then down (do a rotation!) as much as you can for 3 times.</p>
-		<img src="vid4.PNG" width="300">
-		<form id="form2_4">
-			<input type="file" id="vid4" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>Please move your tongue to left and right as much as you can and as fast as you can for at least 3 seconds.</p>
-		<img src="vid5.PNG" width="300">
-		<form id="form2_5">
-			<input type="file" id="vid5" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>Please move your tongue up and down as much as you can and as fast as you can for 3 seconds</p>
-		<img src="vid6.PNG" width="300">
-		<form id="form2_6">
-			<input type="file" id="vid6" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>Please draw a circle in air clockwise with your tongue as fast as you can for 3 times, then, also do it counter-clockwise for 3 times.</p>
-		<img src="vid7.PNG" width="300">
-		<form id="form2_7">
-			<input type="file" id="vid7" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-	<li>
-		<p>Please protrude your tongue out, left, and right as much as you can for 5 seconds each</p>
-		<img src="vid8.PNG" width="300">
-		<form id="form2_8">
-			<input type="file" id="vid8" name="filename">
-			<input type="submit">
-		</form>
-	</li>
-</ol>
 
 
 </div>
