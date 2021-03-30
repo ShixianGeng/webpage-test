@@ -13,7 +13,7 @@ form.addEventListener('submit', uploadVideo());
 function uploadVideo(){
 	return function curried_function(event){
 		if(name === ""){
-			alert("You must input a name!");
+			alert("You must input an ID!");
 		}else{
 			var file = document.getElementById("vid").files[0];
 			var ref = storageRef.child(name+'/');
@@ -34,9 +34,9 @@ function uploadVideo(){
 function updateName(event){
 	name = document.getElementById("username").value;
 	if(name === ""){
-		alert("You must input a name!");
+		alert("You must input an ID!");
 	}else{
-		alert("Name updated!");
+		alert("ID updated!");
 	}
 	event.preventDefault();
 }
