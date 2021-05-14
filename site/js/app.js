@@ -13,15 +13,15 @@ form.addEventListener('submit', uploadVideo());
 function uploadVideo(){
 	return function curried_function(event){
 		if(name === ""){
-			alert("You must input an ID!");
+			alert("あなたの番号を入力してください.");
 		}else{
 			var file = document.getElementById("vid").files[0];
 			var ref = storageRef.child(name+'/');
 			var upload = document.getElementById("upload");
-			upload.innerText = "Uploading... Please Wait."
+			upload.innerText = "アップロード中です...少々お待ちください"
 			ref.put(file).then((snapshot) =>{
-			alert("Submitted video. Thank you very much!");
-			upload.innerText = "Uploaded"
+			alert("アップロード完了.ありがとうございました.");
+			upload.innerText = "アップロード完了"
 			});
 			event.preventDefault();
 
@@ -34,9 +34,9 @@ function uploadVideo(){
 function updateName(event){
 	name = document.getElementById("username").value;
 	if(name === ""){
-		alert("You must input an ID!");
+		alert("あなたの番号を入力してください.");
 	}else{
-		alert("ID updated!");
+		alert("番号が更新されました.");
 	}
 	event.preventDefault();
 }

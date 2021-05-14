@@ -3,12 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<script defer src="js/app.js"></script>
-	<title>Data collection</title>
+	<title>口·舌の動きの撮影</title>
 	<style>
 		#page-wrap {
 		     max-width: 800px;
 		     margin: 0 auto;
 		}
+		.container {
+        display: flex;
+        align-items: center;
+      }
 	</style>
 </head>
 <body>
@@ -27,25 +31,37 @@
 
   		firebase.initializeApp(firebaseConfig);
 	</script>
-<h1>Data Collection</h1>
+<h3>あなたの番号:</h3>
 	<form id="nameinput">
-  		<label for="name">Your Participant ID:</label><br>
   		<input type="text" id="username"><br>
   		<input type="submit" value="Submit">
 	</form>
+<p><b>以下の動画の口，及び舌の動きを真似してください．その様子を<span style="color:red">スマートフォン</span>で撮影してください．</b></p>
 <ul>
-	<li>Please take a video of your mouth with your smartphone as instructed in the instruction video.</li>
-	<li>You don’t need to show your entire face, but please make sure your photo of the mouth and jaw are clear.</li>
-	<li>If you are unable to complete some instructions, it’s fine. Please just record your attempt.</li>
-	<li>Once finished, please upload your video.</li>
+	<li>顔全体を写す必要はありませんが，以下の動画のように，口と舌の全体が写るようにしてください．</li>
+	<li>できない舌の動きがあっても構いません．できる範囲で舌を動かしてみてください．</li>
+	<li>撮影が終了したら，動画をアップロードしてください．</li>
 </ul>
-<h3>Instruction Video</h3>
+<div class ="container">
 <video width="480" height="360" controls>
   <source src="instructions_v2.mp4" type="video/mp4">
-Your browser does not support the video tag.
+あなたのブラウザはビデオタグをサポートしていません．
 </video>
-<h4 id = "upload">Upload Here</h4>
-	<form id="form">
+<div class="text">
+	<ul>
+	<li>動画のまとめ</li>
+	</ul>
+	<ol>
+	<li>できるだけ舌を右に突き出す</li>
+	<li>できるだけ舌を左に突き出す</li>
+	<li>できるだけ前へ舌を突き出す</li>
+	<li>口をすぼめる</li>
+	<li>頬を膨らませる</li>
+</ol>
+	</div>
+</div>
+<h4 id = "upload">動画をアップロードする</h4>
+	<form class="form-inline" id="form">
 		<input type="file" id="vid" name="filename">
 		<input type="submit">
 	</form>
