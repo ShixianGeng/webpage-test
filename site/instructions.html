@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script defer src="js/instructions.js"></script>
+	<title>口·舌の動きの撮影</title>
+	<style>
+		#page-wrap {
+		     max-width: 800px;
+		     margin: 0 auto;
+		}
+		.container {
+        display: flex;
+        align-items: center;
+      }
+	</style>
+</head>
+<body>
+	<div id="page-wrap">
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-storage.js"></script>
+	<script>
+	 var firebaseConfig = {
+	    apiKey: "AIzaSyCWiPUe-0xaDRUI1oT4jPi3ZWqyvd4k8t8",
+	    authDomain: "oral-capabilities.firebaseapp.com",
+	    projectId: "oral-capabilities",
+	    storageBucket: "oral-capabilities.appspot.com",
+	    messagingSenderId: "130456476055",
+	    appId: "1:130456476055:web:5221e827cf63ce9644ccd2"
+  		};		
+
+  		firebase.initializeApp(firebaseConfig);
+	</script>
+<h3>あなたの番号:</h3>
+<p id = "id_indicator"></p>
+<p><b>以下の動画の口，及び舌の動きを真似してください．その様子を<span style="color:red">スマートフォン</span>で撮影してください．</b></p>
+<ul>
+	<li>顔全体を写す必要はありませんが，以下の動画のように，口と舌の全体が写るようにしてください．</li>
+	<li>できない舌の動きがあっても構いません．できる範囲で舌を動かしてみてください．</li>
+	<li>撮影が終了したら，動画をアップロードしてください．</li>
+</ul>
+<div class ="container">
+<video width="480" height="360" controls>
+  <source src="instructions_v3.mp4" type="video/mp4">
+あなたのブラウザはビデオタグをサポートしていません．
+</video>
+<div class="text">
+	<ul>
+	<li><b>動画のまとめ</b></li>
+	</ul>
+	<ol>
+	<li>できるだけ舌を右に突き出す (3秒ほど)</li>
+	<li>できるだけ舌を左に突き出す (3秒ほど)</li>
+	<li>できるだけ前へ舌を突き出す (3秒ほど)</li>
+	<li>口をすぼめる (3秒ほど)</li>
+	<li>頬を膨らませる (3秒ほど)</li>
+</ol>
+	</div>
+</div>
+<h4 id = "upload">動画をアップロードする</h4>
+	<form class="form-inline" id="form">
+		<input type="file" id="vid" name="filename">
+		<input type="submit">
+	</form>
+
+
+
+
+</div>
+
+</body>
+</html>
