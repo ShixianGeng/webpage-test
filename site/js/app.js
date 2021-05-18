@@ -8,7 +8,7 @@ function updateName(event){
 		alert("あなたの番号を入力してください.");
 	}else{
 		alert("番号が更新されました.");
-		window.location.href = "./instructions.html?id="+name;
+		window.location.href = "./instructions.html";
 	}
 	event.preventDefault();
 }
