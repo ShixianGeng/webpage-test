@@ -1,5 +1,5 @@
 // Create a root reference
-var name = "";
+var name = window.name;
 
 var nameinput = document.getElementById("nameinput");
 nameinput.addEventListener('submit',updateName);
@@ -7,6 +7,7 @@ nameinput.addEventListener('submit',updateName);
 
 function updateName(event){
 	name = document.getElementById("username").value;
+	window.name = name;
 	if(name === ""){
 		alert("あなたの番号を入力してください.");
 	}else{
