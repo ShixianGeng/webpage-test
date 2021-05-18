@@ -1,10 +1,9 @@
 // Create a root reference
 var storageRef = firebase.storage().ref();
-
 var form = document.getElementById("form");
 form.addEventListener('submit', uploadVideo());
 var id_indicator = document.getElementById("id_indicator");
-id_indicator.innerText = window.name;
+id_indicator.innerText = name;
 
 function uploadVideo(){
 	return function curried_function(event){
