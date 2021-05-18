@@ -1,4 +1,5 @@
 // Create a root reference
+var name = window.location.href.split('=')[1];
 var storageRef = firebase.storage().ref();
 var form = document.getElementById("form");
 form.addEventListener('submit', uploadVideo());
