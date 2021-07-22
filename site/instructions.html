@@ -142,16 +142,22 @@
 </body>
 	<script>
     function initImageUpload(num) {
+    	var URL = this.window.URL || this.window.webkitURL;
         var file = document.getElementById('cameraInput' + (num-1).toString()).files[0];
+        var value = URL.createObjectURL(file);
         var a = document.getElementById('aDownload'+ num.toString());
-        a.href = file.name;
+        a.href = value;
 
         var ext = file.name.split('.').pop();
         var filename = file.name.substring(0, file.name.lastIndexOf('.'));
 
-        var newFileName = filename + name + "t" + num.toString + "." + ext;//provide the new name here
+        var newFileName = name + "t" + num.toString() + "." + ext;//provide the new name here
 
-        a.setAttribute("download", newFileName);
+        // a.setAttribute("download", newFileName);
+        // a.click();
+
+        a.target = "_blank";
+        a.download = newFileName;
         a.click();
     }
 	</script>
