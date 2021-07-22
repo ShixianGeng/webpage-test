@@ -56,7 +56,7 @@
 	<li>頬を膨らませる (3秒ほど)</li>
 </ol>
 	</div>
-	
+
 <video width="480" height="360" controls>
   <source src="instructions_hospital_1.mp4" type="video/mp4">
 あなたのブラウザはビデオタグをサポートしていません．
@@ -68,7 +68,7 @@
 <input type="file" capture="environment" accept="video/*" id="cameraInput0" style="display:none">
 <p>撮影が終了したら，動画をダウンロードしてください．</p>
 <input type="button" style="display:block;width:120px; height:30px;" value="ダウンロード" onclick="initImageUpload(1)" />
-    <a id="aDownload1">
+
 
 <p>***</p>
 <!-- </div> -->
@@ -79,35 +79,35 @@
   <source src="instructions_hospital_2.mp4" type="video/mp4">
 あなたのブラウザはビデオタグをサポートしていません．
 </video>
-<div>
+<!-- <div> -->
 <p>***</p>
 <p><div>できるだけ舌を左に突き出す (3秒ほど)</div>　"撮影する"ボタンで何度でも撮り直し可能です</p>
   <button style="display:block;width:120px; height:30px;" onclick="document.getElementById('cameraInput1').click()">撮影する</button>
 <input type="file" capture="environment" accept="video/*" id="cameraInput1" name="cameraInput1" style="display:none">
 <p>撮影が終了したら，動画をダウンロードしてください．</p>
 <input type="button" value="ダウンロード" style="display:block;width:120px; height:30px;" onclick="initImageUpload(2)" />
-    <a id="aDownload2">
+
 
 <p>***</p>
-</div>
-
+<!-- </div>
+ -->
 
 <!-- <div class ="container"> -->
 <video width="480" height="360" controls>
   <source src="instructions_hospital_3.mp4" type="video/mp4">
 あなたのブラウザはビデオタグをサポートしていません．
 </video>
-<div>
+<!-- <div> -->
 <p>***</p>
 <p><div>できるだけ前へ舌を突き出す (3秒ほど)</div>　"撮影する"ボタンで何度でも撮り直し可能です</p>
   <button style="display:block;width:120px; height:30px;" onclick="document.getElementById('cameraInput2').click()">撮影する</button>
 <input type="file" capture="environment" accept="video/*" id="cameraInput2" name="cameraInput2" style="display:none">
 <p>撮影が終了したら，動画をダウンロードしてください．</p>
 <input type="button" value="ダウンロード" style="display:block;width:120px; height:30px;" onclick="initImageUpload(3)" />
-    <a id="aDownload3">
+
 
 <p>***</p>
-</div>
+<!-- </div> -->
 
 
 <!-- <div class ="container"> -->
@@ -115,17 +115,17 @@
   <source src="instructions_hospital_4.mp4" type="video/mp4">
 あなたのブラウザはビデオタグをサポートしていません．
 </video>
-<div>
+<!-- <div> -->
 <p>***</p>
 <p><div>口をすぼめる (3秒ほど)</div>　"撮影する"ボタンで何度でも撮り直し可能です</p>
   <button style="display:block;width:120px; height:30px;" onclick="document.getElementById('cameraInput3').click()">撮影する</button>
 <input type="file" capture="environment" accept="video/*" id="cameraInput3" name="cameraInput3" style="display:none">
 <p>撮影が終了したら，動画をダウンロードしてください．</p>
 <input type="button" style="display:block;width:120px; height:30px;" value="ダウンロード" onclick="initImageUpload(4)" />
-    <a id="aDownload4">
+
 
 <p>***</p>
-</div>
+<!-- </div> -->
 
 
 <!-- <div class ="container"> -->
@@ -133,17 +133,17 @@
   <source src="instructions_hospital_5.mp4" type="video/mp4">
 あなたのブラウザはビデオタグをサポートしていません．
 </video>
-<div>
+<!-- <div> -->
 <p>***</p>
 <p><div>頬を膨らませる (3秒ほど)</div>　"撮影する"ボタンで何度でも撮り直し可能です</p>
   <button style="display:block;width:120px; height:30px;" onclick="document.getElementById('cameraInput4').click()">撮影する</button>
 <input type="file" capture="environment" accept="video/*" id="cameraInput4" name="cameraInput4" style="display:none">
 <p>撮影が終了したら，動画をダウンロードしてください．</p>
 <input type="button" style="display:block;width:120px; height:30px;" value="ダウンロード" onclick="initImageUpload(5)" />
-    <a id="aDownload5">
+
 
 <p>***</p>
-</div>
+<!-- </div> -->
 
 
 <!-- <h4 id = "upload">動画をアップロードする</h4>
@@ -163,7 +163,7 @@
     	var URL = this.window.URL || this.window.webkitURL;
         var file = document.getElementById('cameraInput' + (num-1).toString()).files[0];
         var value = URL.createObjectURL(file);
-        var a = document.getElementById('aDownload'+ num.toString());
+        let a = document.createElement("a")
         a.href = value;
 
         var ext = file.name.split('.').pop();
