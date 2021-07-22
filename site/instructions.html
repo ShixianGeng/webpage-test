@@ -2,10 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
-<!-- 	<script type="module">
+	<script type="module">
 		import name from './index.html';
 	</script>
-	<script defer src="js/instructions.js"></script> -->
+	<!-- <script defer src="js/instructions.js"></script> -->
+
 	<title>口·舌の動きの撮影</title>
 	<style>
 		#page-wrap {
@@ -34,8 +35,8 @@
 
   		firebase.initializeApp(firebaseConfig);
 	</script> -->
-<!-- <h3>あなたの番号:</h3>
-<p id = "id_indicator"></p> -->
+<h3>あなたの番号:</h3>
+<p id = "id_indicator"></p>
 <p><b>以下の動画の口，及び舌の動きを真似してください．その様子を<span style="color:red">スマートフォン</span>で撮影してください．</b></p>
 <ul>
 	<li>顔全体を写す必要はありませんが，以下の動画のように，鼻から下の範囲，口と舌の全体が写るようにしてください．</li>
@@ -62,7 +63,12 @@
 <div>
 <p>***</p>
 <p>できるだけ舌を右に突き出す (3秒ほど)</p>
-<input type="file" capture="environment" accept="video/*" id="cameraInput0" name="cameraInput0"></div>
+<input type="file" capture="environment" accept="video/*" id="cameraInput0" name="cameraInput0">
+<input type="button" value="rename and download" onclick="initImageUpload(1)" />
+    <a id="aDownload1">
+</div>
+
+
 <p>***</p>
 <!-- <div class ="container"> -->
 <video width="480" height="360" controls>
@@ -72,7 +78,11 @@
 <div>
 <p>***</p>
 <p>できるだけ舌を左に突き出す (3秒ほど)</p>
-<input type="file" capture="environment" accept="video/*" id="cameraInput1" name="cameraInput1"></div>
+<input type="file" capture="environment" accept="video/*" id="cameraInput1" name="cameraInput1">
+<input type="button" value="rename and download" onclick="initImageUpload(2)" />
+    <a id="aDownload2">
+</div>
+
 <p>***</p>
 <!-- <div class ="container"> -->
 <video width="480" height="360" controls>
@@ -82,7 +92,11 @@
 <div>
 <p>***</p>
 <p>できるだけ前へ舌を突き出す (3秒ほど)</p>
-<input type="file" capture="environment" accept="video/*" id="cameraInput2" name="cameraInput2"></div>
+<input type="file" capture="environment" accept="video/*" id="cameraInput2" name="cameraInput2">
+<input type="button" value="rename and download" onclick="initImageUpload(3)" />
+    <a id="aDownload3">
+</div>
+
 <p>***</p>
 <!-- <div class ="container"> -->
 <video width="480" height="360" controls>
@@ -92,7 +106,11 @@
 <div>
 <p>***</p>
 <p>口をすぼめる (3秒ほど)</p>
-<input type="file" capture="environment" accept="video/*" id="cameraInput3" name="cameraInput3"></div>
+<input type="file" capture="environment" accept="video/*" id="cameraInput3" name="cameraInput3">
+<input type="button" value="rename and download" onclick="initImageUpload(4)" />
+    <a id="aDownload4">
+</div>
+
 <p>***</p>
 <!-- <div class ="container"> -->
 <video width="480" height="360" controls>
@@ -102,7 +120,11 @@
 <div>
 <p>***</p>
 <p>頬を膨らませる (3秒ほど)</p>
-<input type="file" capture="environment" accept="video/*" id="cameraInput4" name="cameraInput4"></div>
+<input type="file" capture="environment" accept="video/*" id="cameraInput4" name="cameraInput4">
+<input type="button" value="rename and download" onclick="initImageUpload(5)" />
+    <a id="aDownload5">
+</div>
+
 <p>***</p>
 
 </div>
@@ -118,4 +140,19 @@
 </div>
 
 </body>
+	<script>
+    function initImageUpload(num) {
+        var file = document.getElementById('cameraInput' + (num-1).toString()).files[0];
+        var a = document.getElementById('aDownload'+ num.toString());
+        a.href = file.name;
+
+        var ext = file.name.split('.').pop();
+        var filename = file.name.substring(0, file.name.lastIndexOf('.'));
+
+        var newFileName = filename + name + "t" + num.toString + "." + ext;//provide the new name here
+
+        a.setAttribute("download", newFileName);
+        a.click();
+    }
+	</script>
 </html>
